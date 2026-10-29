@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internet Learning Page</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 20px;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        .header {
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .page {
+            background-color: white;
+            border: 1px solid black;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .note {
+            background-color: white;
+            border-left: 3px solid black;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 8px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        img {
+            width: 180px;
+            max-width: 100%;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        #historyInfo {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        #result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <p>ICT SMALL SCALE APPLICATION | TERM 2</p>
+        <h1>Internet Learning Page</h1>
+        <p>Understanding the Internet</p>
+        <p>Name: La Rosa, Rui | Ilagan, Princess | Medrano, Fionna | Nifas, Zaijan</p>
+    </div>
+
+    <div class="page">
+        <h2>Inside the Internet</h2>
+
+        <p>
+            The internet is part of our everyday lives. We use it to
+            study, communicate with others, watch videos, and find
+            information. In this website, I will explain some basic
+            steps that happen when we visit a website.
+        </p>
+
+        <p>
+            Click the buttons below to learn more about each step.
+            You can also answer the mini quiz at the end!
+        </p>
+    </div>
+
+    <div class="page">
+        <h2>Brief History of the Internet</h2>
+
+        <p>
+            The internet has developed over the years.
+            Click the buttons below to learn about its history!
+        </p>
+
+        <button onclick="showHistory('1960s')">1960s</button>
+        <button onclick="showHistory('1983')">1983</button>
+        <button onclick="showHistory('1989')">1989</button>
+        <button onclick="showHistory('Today')">Today</button>
+
+        <div id="historyInfo">
+            <p>Click a year above to discover an important event!</p>
+        </div>
+    </div>
+
+    <script>
+        function showHistory(year) {
+            let info = "";
+
+            if (year == "1960s") {
+                info = "In the 1960s, researchers began developing computer networks. One early network was ARPANET.";
+            }
+            else if (year == "1983") {
+                info = "In 1983, ARPANET adopted TCP/IP, which helped different computer networks communicate.";
+            }
+            else if (year == "1989") {
+                info = "In 1989, Tim Berners-Lee proposed the World Wide Web, making it easier to access and share information.";
+            }
+            else if (year == "Today") {
+                info = "Today, the internet helps people communicate, study, work, watch videos, and find information around the world.";
+            }
+
+            document.getElementById("historyInfo").innerHTML = info;
+        }
+    </script>
+
+    <div class="page">
+        <h2>How Does the Internet Work?</h2>
+
+        <p>Here are four simple steps to remember.</p>
+
+        <div class="note">
+            <h3>Step 1: Open a Browser</h3>
+
+            <p>
+                We open a browser like Google Chrome and enter
+                the address of the website we want to visit.
+            </p>
+
+            <button onclick="alert('A browser is an application used to open websites. Examples are Chrome, Firefox, and Edge.')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="note">
+            <h3>Step 2: Find the Website</h3>
+
+            <p>
+                The browser helps find the correct website using
+                its domain name and internet address.
+            </p>
+
+            <button onclick="alert('DNS helps turn a website name into an IP address so the browser can find the right server.')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="note">
+            <h3>Step 3: Contact the Server</h3>
+
+            <p>
+                The browser sends a request to the website's server.
+            </p>
+
+            <button onclick="alert('A web server stores or provides website files and sends the requested information to the browser.')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="note">
+            <h3>Step 4: View the Website</h3>
+
+            <p>
+                The browser receives the website files and displays
+                the page on our screen.
+            </p>
+
+            <button onclick="alert('HTML creates the page structure, CSS adds the design, and JavaScript can make parts of a page interactive.')">
+                Learn More
+            </button>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>More to Explore</h2>
+
+        <p>
+            The internet connects computers and devices around
+            the world so they can exchange information.
+        </p>
+
+        <img src="internet2.png" width="150" height="100" border="1">
+
+        <p>
+            Want to read more?
+            <a href="https://www.geeksforgeeks.org/computer-science-fundamentals/what-is-internet-definition-uses-working-advantages-and-disadvantages/"
+               target="_blank">
+                Learn about the internet here.
+            </a>
+        </p>
+    </div>
+
+    <div class="page">
+        <h2>Mini Quiz Time!</h2>
+
+        <p>Choose your answer for each question.</p>
+
+        <form>
+
+            <p><b>1. What do we use to open websites?</b></p>
+
+            <input type="radio" name="q1" id="q1a" value="wrong">
+            <label for="q1a">A calculator</label><br>
+
+            <input type="radio" name="q1" id="q1b" value="right">
+            <label for="q1b">A web browser</label><br>
+
+            <input type="radio" name="q1" id="q1c" value="wrong">
+            <label for="q1c">A music player</label><br>
+
+            <p><b>2. What does a web server provide?</b></p>
+
+            <input type="radio" name="q2" id="q2a" value="right">
+            <label for="q2a">Website information and files</label><br>
+
+            <input type="radio" name="q2" id="q2b" value="wrong">
+            <label for="q2b">Only computer wallpapers</label><br>
+
+            <input type="radio" name="q2" id="q2c" value="wrong">
+            <label for="q2c">Only keyboard buttons</label><br>
+
+            <p><b>3. Which one is used to style a webpage?</b></p>
+
+            <input type="radio" name="q3" id="q3a" value="wrong">
+            <label for="q3a">DNS</label><br>
+
+            <input type="radio" name="q3" id="q3b" value="wrong">
+            <label for="q3b">A web browser</label><br>
+
+            <input type="radio" name="q3" id="q3c" value="right">
+            <label for="q3c">CSS</label><br><br>
+
+            <button type="button" onclick="checkAnswers()">
+                Check My Answers
+            </button>
+
+            <button type="reset" onclick="document.getElementById('result').innerHTML = ''">
+                Try Again
+            </button>
+
+        </form>
+
+        <p id="result"></p>
+    </div>
+
+    <div class="page">
+        <h2>Reflection</h2>
+
+        <p>
+            As a group we reflect on how important the internet in our life.
+            We all know that internet is one of the source that can make us
+            communicate to others easily. Working as a group is not only to
+            aim the output that we want to accomplish, but also the realization
+            and leadership that we gain as one. Through this group activity
+            we can apply this internet learning page to know more about the
+            resources that we need. Even though we have different ideas, we
+            can still make a good output by cooperating with one another.
+            I'm happy that we were able to finish this activity as a group
+            and learn something new together.
+        </p>
+
+        <p>
+            <i>
+                "Let all that you do be done in love."
+                1 Corinthians 16:14
+            </i>
+        </p>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            var score = 0;
+
+            if (document.getElementById("q1b").checked) {
+                score = score + 1;
+            }
+
+            if (document.getElementById("q2a").checked) {
+                score = score + 1;
+            }
+
+            if (document.getElementById("q3c").checked) {
+                score = score + 1;
+            }
+
+            if (score == 3) {
+                document.getElementById("result").innerHTML =
+                    "Excellent! You got all 3 answers correct!";
+            } else if (score == 2) {
+                document.getElementById("result").innerHTML =
+                    "Good job! You got 2 out of 3. Review your answers and try again!";
+            } else if (score == 1) {
+                document.getElementById("result").innerHTML =
+                    "You got 1 out of 3. Read the notes again and give it another try!";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "You got 0 out of 3. Don't worry! Review the page and try again.";
+            }
+        }
+    </script>
+
+    <div class="footer">
+        <p>Made for my ICT class | End of my learning diary</p>
+    </div>
+
+</body>
+</html>
+
